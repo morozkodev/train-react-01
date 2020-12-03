@@ -1,0 +1,7 @@
+.scheda-prodotto {
+    margin: 20px auto;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
