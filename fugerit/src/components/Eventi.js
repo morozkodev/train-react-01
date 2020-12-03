@@ -6,12 +6,13 @@ class Eventi extends React.Component {
         console.log( e );
         console.log( 'click' );
         e.preventDefault(); // impedisce l'evento di default (in questo caso il link sul click)
+        e.stopPropagation();    // non si propaga ad altri elementi (ad esempio il contenitore)
     }
 
     render() {
         return (
             <div>
-                <a href="#" onClick={this.handleClick}>prova a cliccare</a>
+                <a href="/" onClick={this.handleClick}>prova a cliccare</a>
             </div>
         );
     }

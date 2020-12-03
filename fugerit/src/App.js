@@ -2,12 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import SchedaProdotto from './components/SchedaProdotto';
 import Eventi from './components/Eventi';
+import Interruttore from './components/Interruttore';
 
 function App() {
   return (
     <div className="App">
       <SchedaProdotto/>
       <Eventi/>
+      <Interruttore/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
