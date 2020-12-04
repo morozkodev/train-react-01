@@ -1,27 +1,50 @@
-//import './App.css';
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Header from './components/carrello/Header.js';
+import Menu  from './components/carrello/Menu.js';
+import Prodotti  from './components/carrello/Prodotti.js';
 
-import TabellaRicerca from './components/tabella-ricerca/TabellaRicerca';
+class App extends React.Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <h1>tabella dati filtrati</h1>
-          <TabellaRicerca utenti={Utenti}/>
-      </header>      
-      <br/><br/><br/>
-    </div>
-  );
+  constructor(props){
+    super(props);
+    this.state = { carrello: []};
+  }
+
+  aggiornaCarrello( prodotto ) {
+  
+  }
+
+
+  render() {
+    const vocimenu = [
+      {id: 1, nome: 'Home', link: '/'},
+      {id: 2, nome: 'Prodotti', link: '/prodotti'},
+      {id: 3, nome: 'Contatti', link: '/contatti'},
+    ]
+    const prodotti = [
+      {id: 1, nome: 'Prodotto 1', prezzo: 11, img: { src: 'https://placeimg.com/320/240/tech', alt: 'prodotto1'}},
+      {id: 2, nome: 'Prodotto 2', prezzo: 12, img: { src: 'https://placeimg.com/320/240/tech', alt: 'prodotto2'}},
+      {id: 3, nome: 'Prodotto 3', prezzo: 13, img: { src: 'https://placeimg.com/320/240/tech', alt: 'prodotto3'}},
+      {id: 4, nome: 'Prodotto 4', prezzo: 14, img: { src: 'https://placeimg.com/320/240/tech', alt: 'prodotto4'}},
+    ]
+    
+    return (
+      <Container>
+          <Header titolo='Primo Sito React' />
+          <Menu voci={vocimenu} />
+          <Row>
+            <Col md={8}>
+              <Prodotti prodotti={prodotti} onChangeCarrello={this.aggiornaCarrello}/>
+            </Col>
+            <Col md={4}></Col>
+          </Row>
+      </Container>
+    )
+  }
+
 }
-
+ 
 export default App;
-const Utenti = [
-  { id: 1, nome: 'Alan', cognome: 'Turin', categoria: 'admin', attivo: 1 },
-  { id: 2, nome: 'Marie', cognome: 'Curie', categoria: 'admin', attivo: 1 },
-  { id: 3, nome: 'Margherita', cognome: 'Hack', categoria: 'admin', attivo: 1 },
-  { id: 4, nome: 'Leonardo', cognome: 'Da Vinci', categoria: 'utenti', attivo: 1 },
-  { id: 5, nome: 'Linus', cognome: 'Torvalds', categoria: 'utenti', attivo: 1 },
-  { id: 6, nome: 'Richard', cognome: 'Stallman', categoria: 'utenti', attivo: 0 },
-  { id: 7, nome: 'Francis', cognome: 'Bacon', categoria: 'utenti', attivo: 0 },
-  { id: 8, nome: 'Archimede', cognome: 'Di Siracusa', categoria: 'utenti', attivo: 1 },
-];
