@@ -21,7 +21,7 @@ const Utenti = [
   { id: 3, nome: 'Margherita', cognome: 'Hack', categoria: 'admin', attivo: 1 },
   { id: 4, nome: 'Leonardo', cognome: 'Da Vinci', categoria: 'utenti', attivo: 1 },
   { id: 5, nome: 'Linus', cognome: 'Torvalds', categoria: 'utenti', attivo: 1 },
-  { id: 6, nome: 'Richard', cognome: 'Stallman', categoria: 'utenti', attivo: 1 },
-  { id: 7, nome: 'Francis', cognome: 'Bacon', categoria: 'utenti', attivo: 1 },
+  { id: 6, nome: 'Richard', cognome: 'Stallman', categoria: 'utenti', attivo: 0 },
+  { id: 7, nome: 'Francis', cognome: 'Bacon', categoria: 'utenti', attivo: 0 },
   { id: 8, nome: 'Archimede', cognome: 'Di Siracusa', categoria: 'utenti', attivo: 1 },
 ];
