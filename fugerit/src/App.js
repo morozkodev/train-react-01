@@ -3,12 +3,14 @@ import './App.css';
 import SchedaProdotto from './components/SchedaProdotto';
 import Eventi from './components/Eventi';
 import Interruttore from './components/Interruttore';
-import Benvenuto from './components/Benvenuto';
+import ControlloCustom from './components/controllo-login/ControlloCustom';
+import Orologio from './components/clock/Orologio';
 
 function App() {
   return (
     <div className="App">
-      <Benvenuto utenteAutenticato={false}/>
+      <ControlloCustom/>
+      <Orologio/>
       <SchedaProdotto/>
       <Eventi/>
       <Interruttore/>

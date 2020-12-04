@@ -20,7 +20,7 @@ class SchedaProdotto extends React.Component {
             <div className="scheda-prodotto">
                 <NomeProdotto nome="Mio prodotto"/>
                 <ImmagineProdotto src={prod.productImage} alt={prod.productImageAlt}/>
-                <PrezzoProdotto/>
+                <PrezzoProdotto price={prod.productPrice}/>
                 <DescrizioneProdotto desc={prod.productDescription}/>
                 <BottoneProdotto/>
             </div>

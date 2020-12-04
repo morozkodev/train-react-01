@@ -6,14 +6,14 @@ class Benvenuto extends React.Component {
         let codice;
         const utenteAutenticato = this.props.utenteAutenticato;
         if ( utenteAutenticato ) {
-            codice = <h3>Bentornato</h3>
+            codice = <h3>Bentornato/a</h3>
         } else {
             codice = <h3>Login</h3>
         }
         return (
-            <diV>
+            <div>
                 Bevenuto {codice}
-            </diV>
+            </div>
         )
     };
 
