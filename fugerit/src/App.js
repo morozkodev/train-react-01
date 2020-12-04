@@ -1,34 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import SchedaProdotto from './components/SchedaProdotto';
-import Eventi from './components/Eventi';
-import Interruttore from './components/Interruttore';
-import ControlloCustom from './components/controllo-login/ControlloCustom';
-import Orologio from './components/clock/Orologio';
 
 function App() {
   return (
     <div className="App">
-      <ControlloCustom/>
-      <Orologio/>
-      <SchedaProdotto/>
-      <Eventi/>
-      <Interruttore/>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      
+          <h1>tabella dati filtrati</h1>
+      </header>      
+      <br/><br/><br/>
     </div>
   );
 }
